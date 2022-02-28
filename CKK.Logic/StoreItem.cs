@@ -32,9 +32,9 @@ namespace CKK.Logic
             return _product;
         }
 
-        public Product SetProduct()
+        public Product SetProduct(Product product)
         {
-            ;
+            _product = product;
         } //needs work on this part for this class to be ready
     }
 
