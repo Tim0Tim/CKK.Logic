@@ -9,7 +9,7 @@ namespace CKK.Logic
     class MainTest
     {
 
-        static void Main()
+        static void Main(String[] args)
         {
 
 

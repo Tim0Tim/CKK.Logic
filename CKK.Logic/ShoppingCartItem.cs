@@ -6,10 +6,10 @@ namespace CKK.Logic
     {
         private Product _product;
         private int _quantity;
+        
         private string stuff;
 
-        //stuff = _product;
-
+        
         public ShoppingCartItem(Product product, int quantity)
         {
             _product = product;
@@ -36,7 +36,7 @@ namespace CKK.Logic
             }
             set
             {
-                Product = stuff;
+                Product = _product;
             }
         }
 
