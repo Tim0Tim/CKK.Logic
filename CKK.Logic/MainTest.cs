@@ -8,5 +8,12 @@ namespace CKK.Logic
 {
     class MainTest
     {
+
+        static void Main()
+        {
+
+
+            Console.WriteLine("Hi world");
+        }
     }
 }

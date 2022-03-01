@@ -8,10 +8,53 @@ namespace CKK.Logic
 {
     class Customer
     {
-        private int Id;
+        private int CustomerId;
         private string Name;
         private string Address;
 
+        public Customer(string custname, string custaddress, int custId)
+        {
+            CustomerId = custId;
+            Name = custname;
+            Address = custaddress;
+        }
+
+        public int CId
+        {
+            get
+            {
+                return CId;
+            }
+            set
+            {
+                CId = CustomerId;
+            }
+        }
+
+        public string CName
+        {
+            get
+            {
+                return CName;
+            }
+            set
+            {
+                CName = Name;
+            }
+        }
+
+        public string CAddress
+        {
+            get
+            {
+                return CAddress;
+            }
+            set
+            {
+                CAddress = Address;
+            }
+        }
+        /*
         public int GetId()
         {
            return Id;
@@ -41,5 +84,6 @@ namespace CKK.Logic
         {
             Address = custaddress;
         }
+        */
     }
 }

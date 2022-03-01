@@ -2,10 +2,13 @@
 
 namespace CKK.Logic
 {
-    public class ShoppingCartItem
+    class ShoppingCartItem
     {
         private Product _product;
         private int _quantity;
+        private string stuff;
+
+        //stuff = _product;
 
         public ShoppingCartItem(Product product, int quantity)
         {
@@ -13,24 +16,50 @@ namespace CKK.Logic
             _quantity = quantity;
         }
 
-        public GetQuantity()
+        public int quantity
         {
-            return _quantity;
+            get
+            {
+                return quantity;
+            }
+            set
+            {
+                quantity = _quantity;
+            }
         }
 
-        public SetQuantity(int quantity)
+        public string Product
         {
-            _quantity = quantity;
+            get
+            {
+                return Product;
+            }
+            set
+            {
+                Product = stuff;
+            }
         }
 
-        public GetProduct()
-        {
-            return _product;
-        }
+            /*
+            public GetQuantity()
+            {
+                return _quantity;
+            }
 
-        public SetProduct(Product product)
-        {
-            _product = product;
+            public SetQuantity(int quantity)
+            {
+                _quantity = quantity;
+            }
+
+            public GetProduct()
+            {
+                return _product;
+            }
+
+            public SetProduct(Product product)
+            {
+                _product = product;
+            }
+            */
         }
-    }
 }

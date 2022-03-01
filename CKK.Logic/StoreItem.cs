@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic
 {
-    public class StoreItem
+    /*public*/ class StoreItem
     {
         private Product _product;
         private int _quantity;
@@ -17,6 +17,8 @@ namespace CKK.Logic
             _quantity = quantity;
         }
 
+
+       // /*
         public int GetQuantity()
         {
             return _quantity;
@@ -35,7 +37,9 @@ namespace CKK.Logic
         public Product SetProduct(Product product)
         {
             _product = product;
+            return product;
         } //needs work on this part for this class to be ready
+       // */
     }
 
 

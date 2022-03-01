@@ -9,14 +9,14 @@ namespace CKK.Logic
     class Product
     {
         private int Id;
-        private string Name;
+        private string name;
         private decimal price;
 
 
         public Product(string ProductName, int ProductId, decimal ProductPrice)
         {
             Id = ProductId;
-            Name = ProductName;
+            name = ProductName;
             price = ProductPrice;
         }
 
@@ -24,11 +24,11 @@ namespace CKK.Logic
         {
             get
             {
-                return price;
+                return Price;
             }
             set
             {
-                ;
+                Price = price;
             }
         }
 
@@ -36,15 +36,15 @@ namespace CKK.Logic
         {
             get
             {
-                return Id;
+                return ProductId;
             }
             set
             {
-                ;
+                ProductId = Id;
             }
         }
 
-        public string name
+        public string Name
         {
             get
             {
@@ -52,7 +52,7 @@ namespace CKK.Logic
             }
             set
             {
-                ;
+                Name = name;
             }
         }
 
