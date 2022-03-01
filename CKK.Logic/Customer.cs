@@ -10,7 +10,7 @@ namespace CKK.Logic
     {
         private int Id;
         private string Name;
-        private string Adress;
+        private string Address;
 
         public int GetId()
         {
@@ -20,6 +20,26 @@ namespace CKK.Logic
         public int SetID(int Id)
         {
             Id = customerId;
+        }
+
+        public GetName()
+        {
+            return Name;
+        }
+
+        public SetName(string Name)
+        {
+            Name = name;
+        }
+
+        public GetAddress()
+        {
+            return Address;
+        }
+
+        public SetAddress(string address)
+        {
+            Address = custaddress;
         }
     }
 }

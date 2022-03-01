@@ -11,5 +11,35 @@ namespace CKK.Logic
         private int Id;
         private string Name;
         private decimal Price;
+
+        public GetId()
+        {
+            return Id;
+        }
+
+        public SetId(int Id)
+        {
+            ;
+        }
+
+        public GetName()
+        {
+            return Name;
+        }
+
+        public SetName(string Name)
+        {
+            ;
+        }
+
+        public GetPrice()
+        {
+            return Price;
+        }
+
+        public SetPrice(decimal Price)
+        {
+            Price = price;
+        }
     }
 }
