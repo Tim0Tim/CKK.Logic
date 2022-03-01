@@ -37,7 +37,7 @@ namespace CKK.Logic
             set
             {
                 Product = _product;
-            }
+            }                     // The Problem Is right here!!
         }
 
             /*
