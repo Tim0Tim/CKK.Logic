@@ -48,36 +48,6 @@ namespace CKK.Logic
         {
             Address = custaddress;
         }
-        /*
-        public int GetId()
-        {
-           return Id;
-        }
 
-        public int SetID(int Id)
-        {
-            Id = customerId;
-        }
-
-        public GetName()
-        {
-            return Name;
-        }
-
-        public SetName(string Name)
-        {
-            Name = name;
-        }
-
-        public GetAddress()
-        {
-            return Address;
-        }
-
-        public SetAddress(string address)
-        {
-            Address = custaddress;
-        }
-        */
     }
 }

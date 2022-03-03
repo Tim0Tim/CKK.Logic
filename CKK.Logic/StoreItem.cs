@@ -18,7 +18,7 @@ namespace CKK.Logic
         }
 
 
-       // /*
+     
         public int GetQuantity()
         {
             return _quantity;

@@ -51,38 +51,5 @@ namespace CKK.Logic
         }
 
 
-
-
-        /*
-        public GetProductId()
-        {
-            return Id;
-        }
-
-        public SetId(int Id)
-        {
-            Id;
-        }
-
-        public GetName()
-        {
-            return Name;
-        }
-
-        public SetName(string Name)
-        {
-            ;
-        }
-
-        public GetPrice()
-        {
-            return Price;
-        }
-
-        public SetPrice(decimal Price)
-        {
-            Price = price;
-        }
-        */
     }
 }
