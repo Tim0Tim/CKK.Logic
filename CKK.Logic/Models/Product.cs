@@ -12,14 +12,14 @@ namespace CKK.Logic.Models
         private string _Name;
         private decimal _price;
 
-
+        /*
         public Product(string Name, int Id, decimal Price)
         {
             _Id = Id;
-            _Name = Name;
+            _Name = Name;a
             _price = Price;
         }
-
+        */
         public decimal Getprice()
         {
                 return _price;
