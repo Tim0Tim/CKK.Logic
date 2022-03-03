@@ -20,12 +20,12 @@ namespace CKK.Logic.Models
             _price = Price;
         }
         */
-        public decimal Getprice()
+        public decimal GetPrice()
         {
                 return _price;
         }
 
-        public void Setprice(decimal Price)
+        public void SetPrice(decimal Price)
         {
             _price = Price;
         }
