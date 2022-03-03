@@ -7,7 +7,6 @@ namespace CKK.Logic
         private Product _product;
         private int _quantity;
         
-        private string stuff;
 
         
         public ShoppingCartItem(Product product, int quantity)
@@ -16,50 +15,27 @@ namespace CKK.Logic
             _quantity = quantity;
         }
 
-        public int quantity
+
+
+        public int GetQuantity()
         {
-            get
-            {
-                return quantity;
-            }
-            set
-            {
-                quantity = _quantity;
-            }
+            return _quantity;
         }
 
-        public string Product
+        public void SetQuantity(int quantity)
         {
-            get
-            {
-                return Product;
-            }
-            set
-            {
-                Product = _product;
-            }                     // The Problem Is right here!!
+            _quantity = quantity;
         }
 
-            /*
-            public GetQuantity()
-            {
-                return _quantity;
-            }
-
-            public SetQuantity(int quantity)
-            {
-                _quantity = quantity;
-            }
-
-            public GetProduct()
-            {
-                return _product;
-            }
-
-            public SetProduct(Product product)
-            {
-                _product = product;
-            }
-            */
+        public Product GetProduct()
+        {
+            return _product;
         }
+
+        public void SetProduct(Product product)
+        {
+            _product = product;
+        }
+
+    }
 }

@@ -19,40 +19,34 @@ namespace CKK.Logic
             Address = custaddress;
         }
 
-        public int CId
+        public int GetId()
         {
-            get
-            {
-                return CId;
-            }
-            set
-            {
-                CId = CustomerId;
-            }
+            return CustomerId;
         }
 
-        public string CName
+        public void SetId(int custId)
         {
-            get
-            {
-                return CName;
-            }
-            set
-            {
-                CName = Name;
-            }
+            CustomerId = custId;
         }
 
-        public string CAddress
+        public string GetName()
         {
-            get
-            {
-                return CAddress;
-            }
-            set
-            {
-                CAddress = Address;
-            }
+                return Name;
+        }
+
+        public void SetName(string custname)
+        {
+            Name = custname;
+        }
+
+        public string GetAddress()
+        {
+            return Address;
+        }
+
+        public void SetAddress(string custaddress)
+        {
+            Address = custaddress;
         }
         /*
         public int GetId()

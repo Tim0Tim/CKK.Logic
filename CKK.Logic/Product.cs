@@ -20,40 +20,34 @@ namespace CKK.Logic
             price = ProductPrice;
         }
 
-        public decimal Price
+        public decimal Getprice()
         {
-            get
-            {
-                return Price;
-            }
-            set
-            {
-                Price = price;
-            }
+                return price;
         }
 
-        public int ProductId
+        public void Setprice(decimal ProductPrice)
         {
-            get
-            {
-                return ProductId;
-            }
-            set
-            {
-                ProductId = Id;
-            }
+            price = ProductPrice;
         }
 
-        public string Name
+        public int GetId()
+            {
+                return Id;
+            }
+
+        public void SetId(int ProductId)
         {
-            get
+            Id = ProductId;
+        }
+
+        public string GetName()
             {
-                return Name;
+                return name;
             }
-            set
-            {
-                Name = name;
-            }
+
+        public void SetName(string ProductName)
+        {
+            name = ProductName;
         }
 
 
