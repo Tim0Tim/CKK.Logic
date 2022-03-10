@@ -24,7 +24,7 @@ namespace CKK.Logic.Models
         {
                 return _price;
         }
-
+ 
         public void SetPrice(decimal Price)
         {
             _price = Price;
