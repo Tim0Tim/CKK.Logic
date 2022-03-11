@@ -35,24 +35,48 @@ namespace CKK.Logic.Models
             _name = Name;
         }
 
-        public AddStoreItem(Product prod)
+        public void AddStoreItem(Product prod)
         {
-            ;
+            if (_product1 == null) //if _product1 has no value change value to prod
+            {
+                _product1 = prod;
+            }
+            else
+            {
+                if (_product2 == null) //if _product2 has no value change value to prod
+                {
+                    _product2 = prod;
+                }
+                else
+                {
+                    if (_product3 == null) //if _product3 has no value change value to prod or do nothing
+                    {
+                        _product3 = prod;
+                    }
+                }
+            }
+           /* if() //if _product1 is ocupied skip
+            {
+                if() // if _product2 is occupied skip
+                {
+                    if() //if _product3 is occupied do nothing
+                }
+            }*/
         }
 
         public void  RemoveStoreItem(int productNum)
         {
-            return productNum;
+            
         }
 
         public Product GetStoreItem(int productNum)
         {
-           return productNum;
+           return Product;
         }
 
         public Product FindStoreItemById(int id)
         {
-           return id;
+           return Product;
         }
     }
 }
