@@ -13,7 +13,7 @@ namespace CKK.Logic.Models
         private Product _product1;
         private Product _product2;
         private Product _product3;
-        public decimal productPrice;
+       // public decimal productPrice;
 
         public int GetId()
         {
@@ -39,44 +39,98 @@ namespace CKK.Logic.Models
         {
             if (_product1 == null) //if _product1 has no value change value to prod
             {
-                _product1 = prod;
+                prod = _product1;
             }
             else
             {
                 if (_product2 == null) //if _product2 has no value change value to prod
                 {
-                    _product2 = prod;
+                    prod = _product2;
                 }
                 else
                 {
                     if (_product3 == null) //if _product3 has no value change value to prod or do nothing
                     {
-                        _product3 = prod;
+                        prod = _product3;
                     }
                 }
             }
-           /* if() //if _product1 is ocupied skip
-            {
-                if() // if _product2 is occupied skip
-                {
-                    if() //if _product3 is occupied do nothing
-                }
-            }*/
         }
 
         public void  RemoveStoreItem(int productNum)
         {
-            
+            if (_product1 == productNum)
+            {
+                _product1 = null;
+            }
+            else
+            {
+                if(_product2 == productNum)
+                {
+                    _product2 = null;
+                }
+                else
+                {
+                    if(_product3 == productNum)
+                    {
+                        _product3 = null;
+                    }
+
+                }
+            }
         }
 
         public Product GetStoreItem(int productNum)
         {
-           return Product;
+           if( productNum == _id)//this area needs revising and changes to make it functunal.
+            {
+                _product1 = null;
+                return _product1;
+            }
+           else
+            {
+                if (productNum == _id)
+                {
+                    _product2 = null;
+                    return _product2;
+                }
+                else
+                {
+                    if (productNum == _id)
+                    {
+                        _product3 = null;
+                        return _product3;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+          
+          
+            
+            //return Product;
         }
 
         public Product FindStoreItemById(int id)
         {
-           return Product;
+           if(_product1 == id)
+            {
+                return _product1;
+            }
+           else if (_product2 == id)
+            {
+                return _product2;
+            }
+           else if(_product3 == id)
+            {
+                return _product3;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
