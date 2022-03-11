@@ -82,7 +82,7 @@ namespace CKK.Logic.Models
 
         public Product GetStoreItem(int productNum)
         {
-           if( productNum == _id)//this area needs revising and changes to make it functunal.
+           if( productNum == _id)//this area needs revising and changes to garentee it is functunal.
             {
                 _product1 = null;
                 return _product1;
