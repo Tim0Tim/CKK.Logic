@@ -38,4 +38,4 @@ namespace CKK.Logic.Models
             return (_product.GetPrice() * _quantity);
         }
     }
-}
+}//attempt 2 for update.
