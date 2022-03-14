@@ -45,5 +45,5 @@ namespace CKK.Logic.Models
         {
             _totalPrice = totalPrice;
         }
-    }
+    }//tset
 }
