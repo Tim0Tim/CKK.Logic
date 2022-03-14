@@ -39,19 +39,22 @@ namespace CKK.Logic.Models
         {
             if (_product1 == null) //if _product1 has no value change value to prod
             {
-                prod = _product1;
+                //prod = _product1;
+                _product1 = prod;
             }
             else
             {
                 if (_product2 == null) //if _product2 has no value change value to prod
                 {
-                    prod = _product2;
+                    //prod = _product2;
+                    _product2 = prod;
                 }
                 else
                 {
                     if (_product3 == null) //if _product3 has no value change value to prod or do nothing
                     {
-                        prod = _product3;
+                        //prod = _product3;
+                        _product3 = prod;
                     }
                 }
             }
@@ -59,19 +62,19 @@ namespace CKK.Logic.Models
 
         public void  RemoveStoreItem(int productNum)
         {
-            if (_product1 == productNum)
+            if(_product1.GetId() == productNum)
             {
                 _product1 = null;
             }
             else
             {
-                if(_product2 == productNum)
+                if(_product2.GetId() == productNum)
                 {
                     _product2 = null;
                 }
                 else
                 {
-                    if(_product3 == productNum)
+                    if(_product3.GetId() == productNum)
                     {
                         _product3 = null;
                     }
@@ -115,15 +118,15 @@ namespace CKK.Logic.Models
 
         public Product FindStoreItemById(int id)
         {
-           if(_product1 == id)
+            if (_product1.GetId() == id)
             {
                 return _product1;
             }
-           else if (_product2 == id)
+           else if (_product2.GetId() == id)
             {
                 return _product2;
             }
-           else if(_product3 == id)
+           else if(_product3.GetId() == id)
             {
                 return _product3;
             }
