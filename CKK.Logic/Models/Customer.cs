@@ -19,6 +19,7 @@ namespace CKK.Logic.Models
             _Address = Address;
         }
     */
+    
         public int GetId()
         {
             return _Id;
