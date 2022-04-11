@@ -51,7 +51,25 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem RemoveProduct(Product prod, int quantity)
         {
-            return null;
+            if(_product1 != null)
+            {
+                _product1 = null;
+                return null;
+            }
+            else if(_product2 != null)
+            {
+                _product2 = null;
+                return null;
+            }
+            else if(_product3 != null)
+            {
+                _product3 = null;
+                return null;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public ShoppingCartItem GetProductById(int id)
@@ -61,7 +79,8 @@ namespace CKK.Logic.Models
 
         public decimal GetTotal()
         {
-            return 0;
+            ;
+            return ShoppingCart.Total;
         }
 
         public ShoppingCartItem GetProduct(int productNum)
