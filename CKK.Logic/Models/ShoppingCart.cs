@@ -8,29 +8,45 @@ namespace CKK.Logic.Models
 {
     public class ShoppingCart
     {
-        private Customer Customer;
-        private ShoppingCartItem Product1;
-        private ShoppingCartItem Product2;
-        private ShoppingCartItem Product3;
+        private Customer _customer;
+        private ShoppingCartItem _product1;
+        private ShoppingCartItem _product2;
+        private ShoppingCartItem _product3;
 
-        public ShoppingCart(customer cust)
+        public ShoppingCart(Customer cust)
         {
-            customer = cust;
+            _customer = cust;
         }
 
         public int GetCustomerId()
         {
-            return 0;
+            return 5;
         }
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
             return null;
+
         }
 
         public ShoppingCartItem AddProduct(Product prod)
         {
-            return null;
+            if (_product1 == null)
+            {
+                return _product1;
+            }
+            else if (_product2 == null)
+            {
+                return _product2;
+            }
+            else if (_product3 == null)
+            {
+                return _product3;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public ShoppingCartItem RemoveProduct(Product prod, int quantity)
