@@ -49,7 +49,7 @@ namespace CKK.Logic.Models
             }
         }
 
-        public ShoppingCartItem RemoveProduct(Product prod, int quantity)
+        public  ShoppingCartItem RemoveProduct(Product prod, int quantity)
         {
             if(_product1 != null)
             {
