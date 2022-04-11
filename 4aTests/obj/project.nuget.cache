@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3nyYhvMDOzjegZohe0gDxQNqYD/Gd9ZfRWcoFZUpKo/n5x97NS37jUVTU3up8yyq6EYvR9QUl8d2SCT+Hcb3uw==",
+  "dgSpecHash": "hTBfX6Eav9mKw8PCauK/6FFSk/vSJG3OuSJsxFTbhUvPiAM1P5wM1yjWhf7BmYq4E7YkCPDozRe2CYpFFZkY4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
+  "projectFilePath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\4aTests\\4aTests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\4400112995\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\4400112995\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\4400112995\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.4\\microsoft.net.test.sdk.16.9.4.nupkg.sha512",
@@ -93,7 +94,8 @@
     "C:\\Users\\4400112995\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512",
     "C:\\Users\\4400112995\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
     "C:\\Users\\4400112995\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
-    "C:\\Users\\4400112995\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512"
+    "C:\\Users\\4400112995\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
+    "C:\\Users\\4400112995\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
   "logs": []
 }

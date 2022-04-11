@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "coverlet.collector/3.0.2": {
+        "type": "package",
+        "build": {
+          "build/netstandard1.0/coverlet.collector.targets": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.9.4": {
         "type": "package",
         "compile": {
@@ -11,7 +17,8 @@
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
         },
         "build": {
-          "build/netstandard1.0/_._": {}
+          "build/netstandard1.0/Microsoft.CodeCoverage.props": {},
+          "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -54,10 +61,11 @@
           "lib/netcoreapp2.1/_._": {}
         },
         "build": {
-          "build/netcoreapp2.1/_._": {}
+          "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props": {},
+          "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -321,7 +329,7 @@
           }
         },
         "build": {
-          "build/netcoreapp2.1/_._": {}
+          "build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -1623,10 +1631,12 @@
           "xunit.extensibility.execution": "[2.4.1]"
         },
         "build": {
-          "build/_._": {}
+          "build/xunit.core.props": {},
+          "build/xunit.core.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/xunit.core.props": {},
+          "buildMultiTargeting/xunit.core.targets": {}
         }
       },
       "xunit.extensibility.core/2.4.1": {
@@ -1655,23 +1665,66 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
-      "4aTests/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Microsoft.NET.Test.Sdk": "16.9.4",
-          "xunit": "2.4.1"
-        },
-        "compile": {
-          "bin/placeholder/4aTests.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/4aTests.dll": {}
+      "xunit.runner.visualstudio/2.4.3": {
+        "type": "package",
+        "build": {
+          "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       }
     }
   },
   "libraries": {
+    "coverlet.collector/3.0.2": {
+      "sha512": "iBvPAIDaI7j/iMx/DzCGCJ3rdiOmel9VINEfaTiBv/NKIGHOP4X3hqc6Q1wgMtArEshlhXexQknP17SK4vXb1w==",
+      "type": "package",
+      "path": "coverlet.collector/3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard1.0/Microsoft.CSharp.dll",
+        "build/netstandard1.0/Microsoft.DotNet.PlatformAbstractions.dll",
+        "build/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "build/netstandard1.0/Microsoft.Extensions.DependencyInjection.dll",
+        "build/netstandard1.0/Microsoft.Extensions.DependencyModel.dll",
+        "build/netstandard1.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "build/netstandard1.0/Microsoft.TestPlatform.CoreUtilities.dll",
+        "build/netstandard1.0/Microsoft.TestPlatform.PlatformAbstractions.dll",
+        "build/netstandard1.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
+        "build/netstandard1.0/Mono.Cecil.Mdb.dll",
+        "build/netstandard1.0/Mono.Cecil.Pdb.dll",
+        "build/netstandard1.0/Mono.Cecil.Rocks.dll",
+        "build/netstandard1.0/Mono.Cecil.dll",
+        "build/netstandard1.0/Newtonsoft.Json.dll",
+        "build/netstandard1.0/NuGet.Frameworks.dll",
+        "build/netstandard1.0/System.AppContext.dll",
+        "build/netstandard1.0/System.Collections.Immutable.dll",
+        "build/netstandard1.0/System.Dynamic.Runtime.dll",
+        "build/netstandard1.0/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard1.0/System.Linq.Expressions.dll",
+        "build/netstandard1.0/System.Linq.dll",
+        "build/netstandard1.0/System.ObjectModel.dll",
+        "build/netstandard1.0/System.Reflection.Emit.ILGeneration.dll",
+        "build/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "build/netstandard1.0/System.Reflection.Emit.dll",
+        "build/netstandard1.0/System.Reflection.Metadata.dll",
+        "build/netstandard1.0/System.Reflection.TypeExtensions.dll",
+        "build/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard1.0/System.Text.RegularExpressions.dll",
+        "build/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "build/netstandard1.0/System.Threading.dll",
+        "build/netstandard1.0/System.Xml.ReaderWriter.dll",
+        "build/netstandard1.0/System.Xml.XDocument.dll",
+        "build/netstandard1.0/coverlet.collector.deps.json",
+        "build/netstandard1.0/coverlet.collector.dll",
+        "build/netstandard1.0/coverlet.collector.pdb",
+        "build/netstandard1.0/coverlet.collector.targets",
+        "build/netstandard1.0/coverlet.core.dll",
+        "build/netstandard1.0/coverlet.core.pdb",
+        "coverlet-icon.png",
+        "coverlet.collector.3.0.2.nupkg.sha512",
+        "coverlet.collector.nuspec"
+      ]
+    },
     "Microsoft.CodeCoverage/16.9.4": {
       "sha512": "N/RYB07gJkPZ1nJiq0QGxFIL+X5vVl4GI99PiTYXpbfI30NTZMRJgZ+4jYLFYLDQqj9o1Juhv+3iiymd7lozrA==",
       "type": "package",
@@ -5761,15 +5814,44 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
-    "4aTests/1.0.0": {
-      "type": "project",
-      "path": "../4aTests/4aTests.csproj",
-      "msbuildProject": "../4aTests/4aTests.csproj"
+    "xunit.runner.visualstudio/2.4.3": {
+      "sha512": "kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
+      "type": "package",
+      "path": "xunit.runner.visualstudio/2.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/net452/xunit.abstractions.dll",
+        "build/net452/xunit.runner.reporters.net452.dll",
+        "build/net452/xunit.runner.utility.net452.dll",
+        "build/net452/xunit.runner.visualstudio.props",
+        "build/net452/xunit.runner.visualstudio.testadapter.dll",
+        "build/netcoreapp2.1/xunit.abstractions.dll",
+        "build/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll",
+        "build/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll",
+        "build/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
+        "build/netcoreapp2.1/xunit.runner.visualstudio.props",
+        "build/uap10.0.16299/xunit.runner.reporters.netstandard15.dll",
+        "build/uap10.0.16299/xunit.runner.utility.netstandard15.dll",
+        "build/uap10.0.16299/xunit.runner.utility.uwp10.dll",
+        "build/uap10.0.16299/xunit.runner.utility.uwp10.pri",
+        "build/uap10.0.16299/xunit.runner.visualstudio.props",
+        "build/uap10.0.16299/xunit.runner.visualstudio.targets",
+        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.dll",
+        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.pri",
+        "logo-512-transparent.png",
+        "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
+        "xunit.runner.visualstudio.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "4aTests >= 1.0.0"
+      "Microsoft.NET.Test.Sdk >= 16.9.4",
+      "coverlet.collector >= 3.0.2",
+      "xunit >= 2.4.1",
+      "xunit.runner.visualstudio >= 2.4.3"
     ]
   },
   "packageFolders": {
@@ -5780,11 +5862,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
-      "projectName": "CKK.Logic",
-      "projectPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
+      "projectUniqueName": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\4aTests\\4aTests.csproj",
+      "projectName": "4aTests",
+      "projectPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\4aTests\\4aTests.csproj",
       "packagesPath": "C:\\Users\\4400112995\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\CKK.Logic\\obj\\",
+      "outputPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\4aTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -5805,11 +5887,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\4aTests\\4aTests.csproj": {
-              "projectPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\4aTests\\4aTests.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -5821,6 +5899,28 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "Microsoft.NET.Test.Sdk": {
+            "target": "Package",
+            "version": "[16.9.4, )"
+          },
+          "coverlet.collector": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.0.2, )"
+          },
+          "xunit": {
+            "target": "Package",
+            "version": "[2.4.1, )"
+          },
+          "xunit.runner.visualstudio": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.4.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

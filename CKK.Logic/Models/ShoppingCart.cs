@@ -13,9 +13,9 @@ namespace CKK.Logic.Models
         private ShoppingCartItem Product2;
         private ShoppingCartItem Product3;
 
-        public ShoppingCart(Customer cust)
+        public ShoppingCart(customer cust)
         {
-            Customer = cust;
+            customer = cust;
         }
 
         public int GetCustomerId()
