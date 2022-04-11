@@ -51,9 +51,6 @@ namespace CKK.Logic.Models
         public ShoppingCartItem GetProduct(int productNum)
         {
             return null;
-        }
-
-        
-            
+        }     
     }
 }
