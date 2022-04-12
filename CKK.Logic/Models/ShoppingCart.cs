@@ -27,29 +27,37 @@ namespace CKK.Logic.Models
         {
             if(_product1.GetProduct() == prod)
             {
-               _product1.GetQuantity();
+                _product1.SetQuantity(_product1.GetQuantity() + quantity);
             }
-            return null;
-        }
-
-        public ShoppingCartItem AddProduct(Product prod)
-        {
-            if (_product1 == null)
+            if(_product1.GetProduct() == null)
             {
-                return _product1;
+                return new ShoppingCartItem(prod, quantity);
             }
-            else if (_product2 == null)
+            if(_product2.GetProduct() == prod)
             {
-                return _product2;
+                _product2.SetQuantity(_product2.GetQuantity() + quantity);
             }
-            else if (_product3 == null)
+            if(_product2.GetProduct() == null)
             {
-                return _product3;
+                return new ShoppingCartItem(prod, quantity);
+            }
+            if(_product3.GetProduct() == prod)
+            {
+                _product3.SetQuantity(_product3.GetQuantity() + quantity);
+            }
+            if(_product3.GetProduct() == null)
+            {
+                return new ShoppingCartItem(prod, quantity);
             }
             else
             {
                 return null;
             }
+        }
+
+        public ShoppingCartItem AddProduct(Product prod)
+        {
+                return AddProduct(prod,1);
         }
 
         public  ShoppingCartItem RemoveProduct(Product prod, int quantity)
