@@ -10,7 +10,7 @@ namespace _4aTests
         [Fact]
         public void GetTotalPass()
         {
-
+            
         }
 
         [Fact]
