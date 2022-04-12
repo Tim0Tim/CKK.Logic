@@ -28,10 +28,12 @@ namespace CKK.Logic.Models
             if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId())
             {
                 _product1.SetQuantity(_product1.GetQuantity() + quantity);
+                return _product1;
             }
             if(_product1 == null)
             {
-                return new ShoppingCartItem(prod, quantity);
+                _product1 = new ShoppingCartItem(prod, quantity);
+                return _product1;
             }
             if(_product2 != null && _product2.GetProduct().GetId() == prod.GetId())
             {
@@ -39,15 +41,17 @@ namespace CKK.Logic.Models
             }
             if(_product2.GetProduct() == null)
             {
-                return new ShoppingCartItem(prod, quantity);
+                _product2 = new ShoppingCartItem(prod, quantity);
+                return _product2;
             }
-            if(_product3.GetProduct() == prod)
+            if(_product3 != null && _product3.GetProduct() == prod)//issue is here
             {
                 _product3.SetQuantity(_product3.GetQuantity() + quantity);
             }
             if(_product3.GetProduct() == null)
             {
-                return new ShoppingCartItem(prod, quantity);
+                _product3 = new ShoppingCartItem(prod, quantity);
+                return _product3;
             }
             else
             {
