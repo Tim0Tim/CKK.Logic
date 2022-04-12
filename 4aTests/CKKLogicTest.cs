@@ -3,10 +3,10 @@ using Xunit;
 
 namespace _4aTests
 {
-    public class UnitTest1
+    public class CKKLogicTest
     {
         [Fact]
-        public void Test1()
+        public void GetIdPass()
         {
 
         }
