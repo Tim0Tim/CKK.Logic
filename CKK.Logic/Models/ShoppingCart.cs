@@ -20,8 +20,7 @@ namespace CKK.Logic.Models
 
         public int GetCustomerId()
         {
-            _customer.GetId();
-            return 5;
+            return _customer.GetId();
         }
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
