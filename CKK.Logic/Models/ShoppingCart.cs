@@ -71,7 +71,7 @@ namespace CKK.Logic.Models
             {
                 quantity = _product1.GetQuantity();
                 //_product1.SetQuantity(quantity-1);
-                if(quantity <= 1)
+                if(quantity <= 0)
                 {
                     //_product1 = null;
                     return null;
@@ -86,7 +86,7 @@ namespace CKK.Logic.Models
             else if(_product2 != null && _product2.GetProduct() == prod)
             {
                 _product2.SetQuantity(quantity - 1);
-                if(quantity <= 1)
+                if(quantity <= 0)
                 {
                     _product2 = null;
                 }
@@ -95,7 +95,7 @@ namespace CKK.Logic.Models
             else if(_product3 != null && _product3.GetProduct() == prod)
             {
                 _product3.SetQuantity(quantity - 1);
-                if(quantity <= 1)
+                if(quantity <= 0)
                 {
                     //_product3 = null;
                     return null;
