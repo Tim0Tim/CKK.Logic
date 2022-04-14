@@ -39,7 +39,8 @@ namespace CKK.Logic.Models
             {
                 _product2.SetQuantity(_product2.GetQuantity() + quantity);
             }
-            if(_product2.GetProduct() == null)
+            //if(_product2.GetProduct() == null)
+            if(_product2 == null)
             {
                 _product2 = new ShoppingCartItem(prod, quantity);
                 return _product2;
@@ -48,7 +49,8 @@ namespace CKK.Logic.Models
             {
                 _product3.SetQuantity(_product3.GetQuantity() + quantity);
             }
-            if(_product3.GetProduct() == null)
+            //if(_product3.GetProduct() == null)
+            if(_product3 == null)
             {
                 _product3 = new ShoppingCartItem(prod, quantity);
                 return _product3;
