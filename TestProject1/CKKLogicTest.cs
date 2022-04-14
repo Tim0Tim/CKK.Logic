@@ -10,7 +10,7 @@ namespace CKK.Logic.Tests
         [Fact]
         public void GetTotalPass() //Complete
         {
-            Product it1 = new Product();
+            var it1 = new Product();
             var it2 = new Product();
             var it3 = new Product();
             var Cu = new Customer();
@@ -42,7 +42,7 @@ namespace CKK.Logic.Tests
         [Fact]
         public void GetTotalFail() //Complete
         {
-            Product it1 = new Product();
+            var it1 = new Product();
             var it2 = new Product();
             var it3 = new Product();
             var Cu = new Customer();
