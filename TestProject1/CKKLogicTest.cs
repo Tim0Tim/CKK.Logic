@@ -79,15 +79,11 @@ namespace CKK.Logic.Tests
             var it3 = new Product();
             var Cu = new Customer();
             var sh = new ShoppingCart(Cu);
-            var sh1 = new ShoppingCartItem(it1, 2);
-            //  var sh2 = new ShoppingCartItem(it2, 1);
-            //  var sh3 = new ShoppingCartItem(it3, 4);
 
             it1.SetId(1);
             it1.SetName("Tomato");
             it1.SetPrice(0.99m);
             
-
             it2.SetId(2);
             it2.SetName("orange");
             it2.SetPrice(1.02m);
@@ -100,16 +96,21 @@ namespace CKK.Logic.Tests
             Cu.SetId(11111111);
             Cu.SetAddress("1532 N 2253 W");
 
-            sh.RemoveProduct(it1, -1);
-         //   sh.RemoveProduct(it2, -1);
-          //  sh.RemoveProduct(it3, -1);
-            var ro1 = sh1.GetQuantity();
-          //  var ro2 = sh2.GetQuantity();
-          //  var ro3 = sh3.GetQuantity();
-            Assert.Equal(1, ro1);
-          //  Assert.Equal(0, ro2);
-          //  Assert.Equal(3, ro3);
+            sh.AddProduct(it1, 2);
+            sh.AddProduct(it2, 1);
+            sh.AddProduct(it3, 4);
 
+            sh.RemoveProduct(it1, 1);
+            sh.RemoveProduct(it2, 1);
+            sh.RemoveProduct(it3, 1);
+
+            var ro1 = sh.GetProduct(1).GetQuantity();
+            var ro2 = sh.GetProduct(2).GetQuantity();
+            var ro3 = sh.GetProduct(3).GetQuantity();
+
+            Assert.Equal(1, ro1);
+            Assert.Equal(0, ro2);
+            Assert.Equal(3, ro3);
 
         }
 

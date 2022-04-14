@@ -67,43 +67,35 @@ namespace CKK.Logic.Models
         public  ShoppingCartItem RemoveProduct(Product prod, int quantity)
         {
 
-            if(_product1 != null && _product1.GetProduct() == prod)
+            if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId())
             {
-                quantity = _product1.GetQuantity();
-                //_product1.SetQuantity(quantity-1);
-                if(quantity <= 0)
-                {
-                    //_product1 = null;
-                    return null;
-                }
-                else
-                {
-                    _product1.SetQuantity(quantity - 1);
-                    return _product1;
-                }
-
+               _product1.SetQuantity(_product1.GetQuantity() - quantity);
+                return _product1;
             }
-            else if(_product2 != null && _product2.GetProduct() == prod)
+            if(_product1 != null && _product1.GetQuantity() <= 0)
             {
-                _product2.SetQuantity(quantity - 1);
-                if(quantity <= 0)
-                {
-                    _product2 = null;
-                }
+                _product1.SetQuantity(0);
+                return _product1;
+            }
+            if (_product2 != null && _product2.GetProduct().GetId() == prod.GetId())
+            {
+                _product2.SetQuantity(_product2.GetQuantity() - quantity);
                 return _product2;
             }
-            else if(_product3 != null && _product3.GetProduct() == prod)
+            if (_product2 != null && _product2.GetQuantity() <= 0)
             {
-                _product3.SetQuantity(quantity - 1);
-                if(quantity <= 0)
-                {
-                    //_product3 = null;
-                    return null;
-                }
-                else
-                {
-                    return _product3;
-                }
+                _product2.SetQuantity(0);
+                return _product2;
+            }
+            if (_product3 != null && _product3.GetProduct().GetId() == prod.GetId())
+            {
+                _product3.SetQuantity(_product3.GetQuantity() - quantity);
+                return _product3;
+            }
+            if (_product3 != null && _product3.GetQuantity() <= 0)
+            {
+                _product3.SetQuantity(0);
+                return _product3;
             }
             else
             {
