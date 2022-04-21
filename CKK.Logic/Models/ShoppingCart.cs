@@ -25,24 +25,17 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId())
+            if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId() && quantity > 0)
             {
-                if (quantity > 0)
-                {
                     _product1.SetQuantity(_product1.GetQuantity() + quantity);
                     return _product1;
-                }
-                else
-                {
-                    return null;
-                }
             }
             if(_product1 == null)
             {
                 _product1 = new ShoppingCartItem(prod, quantity);
                 return _product1;
             }
-            if(_product2 != null && _product2.GetProduct().GetId() == prod.GetId())
+            if(_product2 != null && _product2.GetProduct().GetId() == prod.GetId() && quantity > 0)
             {
                 _product2.SetQuantity(_product2.GetQuantity() + quantity);
             }
@@ -51,7 +44,7 @@ namespace CKK.Logic.Models
                 _product2 = new ShoppingCartItem(prod, quantity);
                 return _product2;
             }
-            if(_product3 != null && _product3.GetProduct().GetId() == prod.GetId())
+            if(_product3 != null && _product3.GetProduct().GetId() == prod.GetId() && quantity > 0)
             {
                 _product3.SetQuantity(_product3.GetQuantity() + quantity);
             }
