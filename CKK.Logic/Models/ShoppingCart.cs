@@ -53,6 +53,10 @@ namespace CKK.Logic.Models
                 _product3 = new ShoppingCartItem(prod, quantity);
                 return _product3;
             }
+            if(prod == null)
+            {
+                return null;
+            }
             else
             {
                 return null;
