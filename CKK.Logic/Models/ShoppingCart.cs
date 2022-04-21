@@ -27,8 +27,15 @@ namespace CKK.Logic.Models
         {
             if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId())
             {
-                _product1.SetQuantity(_product1.GetQuantity() + quantity);
-                return _product1;
+                if (quantity > 0)
+                {
+                    _product1.SetQuantity(_product1.GetQuantity() + quantity);
+                    return _product1;
+                }
+                else
+                {
+                    return null;
+                }
             }
             if(_product1 == null)
             {
