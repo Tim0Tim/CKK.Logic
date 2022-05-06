@@ -10,11 +10,18 @@ namespace CKK.Logic.Models
     {
         private int _id;
         private string _name;
-        private var Items = new List<StoreItem>();
+        private List<StoreItem> Items;
+        //private var Items = new List<StoreItem>();
         //private Product _product1;
         //private Product _product2;
         //private Product _product3;
-       // public decimal productPrice;
+        // public decimal productPrice;
+
+        public Store()
+        {
+            Items = new List<StoreItem>();
+            int _Id = _id;
+        }
 
         public int GetId()
         {
@@ -67,9 +74,13 @@ namespace CKK.Logic.Models
         {
             foreach(var item in Items)
             {
-                if(Items._Id() == id)
+                if(Items._Id == id)
                 {
-                    Items._quantity = 0;
+                    Items._quantity - quantity;
+                    if(Items._quantity < 0)
+                    {
+                        Items.quantity = 0;
+                    }
           
                 }
                 return Items;//._quantity;

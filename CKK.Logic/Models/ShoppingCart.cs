@@ -9,7 +9,8 @@ namespace CKK.Logic.Models
     public class ShoppingCart
     {
         private Customer _customer;
-        var Products = new List<ShoppingCartItem>();
+        private List<ShoppingCartItem> Products;
+        //var Products = new List<ShoppingCartItem>();
         //private ShoppingCartItem _product1;
         //private ShoppingCartItem _product2;
         //private ShoppingCartItem _product3;
@@ -17,6 +18,7 @@ namespace CKK.Logic.Models
         public ShoppingCart(Customer cust)
         {
             _customer = cust;
+            Products = new List<ShoppingCartItem>();
         }
 
         public int GetCustomerId()
@@ -26,6 +28,10 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
+            if(prod.GetId() && quantity > 0 == Items.GetId() && Store.Items.GetQuantity() > 0)
+            {
+
+            }
             //if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId() && quantity > 0)
             //{
             //        _product1.SetQuantity(_product1.GetQuantity() + quantity);
@@ -126,6 +132,7 @@ namespace CKK.Logic.Models
 
         public decimal GetTotal() //Get total price
         {
+            return 0;
             //return (_product1.GetTotal() + _product2.GetTotal() + _product3.GetTotal());
 
         }
