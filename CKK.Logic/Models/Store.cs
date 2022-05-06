@@ -10,9 +10,10 @@ namespace CKK.Logic.Models
     {
         private int _id;
         private string _name;
-        private Product _product1;
-        private Product _product2;
-        private Product _product3;
+        private var Items = new List<StoreItem>();
+        //private Product _product1;
+        //private Product _product2;
+        //private Product _product3;
        // public decimal productPrice;
 
         public int GetId()
@@ -35,52 +36,63 @@ namespace CKK.Logic.Models
             _name = Name;
         }
 
-        public void AddStoreItem(Product prod)
+        public StoreItem AddStoreItem(Product prod, int quantity)
         {
-            if (_product1 == null) //if _product1 has no value change value to prod
-            {
-                //prod = _product1;
-                _product1 = prod;
-            }
-            else
-            {
-                if (_product2 == null) //if _product2 has no value change value to prod
-                {
-                    //prod = _product2;
-                    _product2 = prod;
-                }
-                else
-                {
-                    if (_product3 == null) //if _product3 has no value change value to prod or do nothing
-                    {
-                        //prod = _product3;
-                        _product3 = prod;
-                    }
-                }
-            }
+            Items.Add(prod , quantity);
+            return Items;
+            //if (_product1 == null) //if _product1 has no value change value to prod
+            //{
+            //    //prod = _product1;
+            //    _product1 = prod;
+            //}
+            //else
+            //{
+            //    if (_product2 == null) //if _product2 has no value change value to prod
+            //    {
+            //        //prod = _product2;
+            //        _product2 = prod;
+            //    }
+            //    else
+            //    {
+            //        if (_product3 == null) //if _product3 has no value change value to prod or do nothing
+            //        {
+            //            //prod = _product3;
+            //            _product3 = prod;
+            //        }
+            //    }
+            //}
         }
 
-        public void  RemoveStoreItem(int productNum)
+        public StoreItem RemoveStoreItem(int id, int quantity)
         {
-            if(1 == productNum)
+            foreach(var item in Items)
             {
-                _product1 = null;
-            }
-            else
-            {
-                if(2 == productNum)
+                if(Items._Id() == id)
                 {
-                    _product2 = null;
+                    Items._quantity = 0;
+          
                 }
-                else
-                {
-                    if( 3/*_product3.GetId() */== productNum)
-                    {
-                        _product3 = null;
-                    }
+                return Items;//._quantity;
+            }
+            //if(1 == productNum)
+            //{
+            //    _product1 = null;
+            //}
+            //else
+            //{
+            //    if(2 == productNum)
+            //    {
+            //        _product2 = null;
+            //    }
+            //    else
+            //    {
+            //        if( 3/*_product3.GetId() */== productNum)
+            //        {
+            //            _product3 = null;
+            //        }
 
-                }
-            }
+            //    }
+            //}
         }
 
         public Product GetStoreItem(int productNum)
@@ -118,22 +130,29 @@ namespace CKK.Logic.Models
 
         public Product FindStoreItemById(int id)
         {
-            if (_product1.GetId() == id)
+            foreach(var item in Items)
             {
-                return _product1;
+                if(Items.Product._Id == id)
+                {
+                    return Items.Product;
+                }
             }
-           else if (_product2.GetId() == id)
-            {
-                return _product2;
-            }
-           else if(_product3.GetId() == id)
-            {
-                return _product3;
-            }
-            else
-            {
-                return null;
-            }
+           // if (_product1.GetId() == id)
+           // {
+           //     return _product1;
+           // }
+           //else if (_product2.GetId() == id)
+           // {
+           //     return _product2;
+           // }
+           //else if(_product3.GetId() == id)
+           // {
+           //     return _product3;
+           // }
+           // else
+           // {
+           //     return null;
+           // }
         }
     }
 }
