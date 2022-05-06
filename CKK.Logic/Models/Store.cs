@@ -97,30 +97,30 @@ namespace CKK.Logic.Models
 
         public Product GetStoreItem(int productNum)
         {
-           if( productNum == 1)//this area needs revising and changes to garentee it is functunal.
-            {
+           //if( productNum == 1)//this area needs revising and changes to garentee it is functunal.
+           // {
                 
-                return _product1;
-            }
-           else
-            {
-                if (productNum == 2)
-                {
+           //     return _product1;
+           // }
+           //else
+           // {
+           //     if (productNum == 2)
+           //     {
                     
-                    return _product2;
-                }
-                else
-                {
-                    if (productNum == 3)
-                    {
-                      //  _product3 = null;
-                        return _product3;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
+           //         return _product2;
+           //     }
+           //     else
+           //     {
+           //         if (productNum == 3)
+           //         {
+           //           //  _product3 = null;
+           //             return _product3;
+           //         }
+           //         else
+           //         {
+           //             return null;
+           //         }
+           //     }
             }
           
           
