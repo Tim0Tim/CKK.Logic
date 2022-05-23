@@ -179,11 +179,13 @@ namespace CKK.Logic.Models
 
         public StoreItem FindStoreItemById(int id)
         {
-            var si =
+
+            /*IEnumerable<StoreItem>*/var si =
                 from e in Items
                 where (e.GetProduct().GetId() == id)
                 select e;
-            return;
+            
+            return si;
 
 
             //foreach(var item in Items)
@@ -212,3 +214,4 @@ namespace CKK.Logic.Models
         }
     }
 }
+//https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.firstordefault?view=net-6.0
