@@ -45,8 +45,26 @@ namespace CKK.Logic.Models
 
         public StoreItem AddStoreItem(Product prod, int quantity)
         {
-            Items.Add(prod , quantity);
-            return Items;
+            //if (Items.Contains<>
+          //  foreach 
+            var a1 = FindStoreItemById(prod.GetId());
+            if (a1 == null)
+            {   
+                var a2 = new StoreItem(prod, quantity);
+                Items.Add(a2);
+                return a2;
+            }
+            else
+            {
+                a1.SetQuantity(a1.GetQuantity() + quantity);
+                return a1;
+            }
+                                                       // false return
+           // new { e.List<StoreItem>.Add }
+           //// Product prod ,quantity
+           // Items.Add(test);
+           // //List<StoreItem>.Add(AddStoreItem(prod, quantity);
+           // return Items;
             //if (_product1 == null) //if _product1 has no value change value to prod
             //{
             //    //prod = _product1;
@@ -72,19 +90,31 @@ namespace CKK.Logic.Models
 
         public StoreItem RemoveStoreItem(int id, int quantity)
         {
-            foreach(var item in Items)
+            var r1 = FindStoreItemById(id);
+
+            if (r1 != null)
             {
-                if(Items._Id == id)
-                {
-                    Items._quantity - quantity;
-                    if(Items._quantity < 0)
-                    {
-                        Items.quantity = 0;
-                    }
-          
-                }
-                return Items;//._quantity;
+                r1.SetQuantity(r1.GetQuantity() - quantity);
             }
+            else
+            {
+                quantity = 0;
+                r1.SetQuantity(quantity);
+            }
+            return r1;
+            //foreach(var item in Items)
+            //{
+            //    if(Items._Id == id)
+            //    {
+            //        Items._quantity - quantity;
+            //        if(Items._quantity < 0)
+            //        {
+            //            Items.quantity = 0;
+            //        }
+          
+            //    }
+            //    return Items;//._quantity;
+            //}
             //if(1 == productNum)
             //{
             //    _product1 = null;
@@ -132,22 +162,24 @@ namespace CKK.Logic.Models
            //             return null;
            //         }
            //     }
-            }
+
+                //}
           
           
             
             //return Product;
         }
 
-        public Product FindStoreItemById(int id)
+        public StoreItem FindStoreItemById(int id)
         {
-            foreach(var item in Items)
-            {
-                if(Items.Product._Id == id)
-                {
-                    return Items.Product;
-                }
-            }
+            var it = ;
+            //foreach(var item in Items)
+            //{
+            //    if(Items.Product._Id == id)
+            //    {
+            //        return Items.Product;
+            //    }
+            //}
            // if (_product1.GetId() == id)
            // {
            //     return _product1;
