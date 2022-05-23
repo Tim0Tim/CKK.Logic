@@ -92,16 +92,21 @@ namespace CKK.Logic.Models
         {
             var r1 = FindStoreItemById(id);
 
-            if (r1 != null)
+            if (r1.GetQuantity() <= 0)
             {
-                r1.SetQuantity(r1.GetQuantity() - quantity);
+                r1.SetQuantity(quantity = 0);
+                return r1;
             }
+            //if (r1 != null)
+            //{
+            //    r1.SetQuantity(r1.GetQuantity() - quantity);
+            //}
             else
             {
-                quantity = 0;
-                r1.SetQuantity(quantity);
+                return null;
+                //quantity = 0;
+                //r1.SetQuantity(quantity);
             }
-            return r1;
             //foreach(var item in Items)
             //{
             //    if(Items._Id == id)
@@ -138,6 +143,8 @@ namespace CKK.Logic.Models
 
         public Product GetStoreItem(int productNum)
         {
+
+            var i1 = Get);
            //if( productNum == 1)//this area needs revising and changes to garentee it is functunal.
            // {
                 
@@ -172,7 +179,7 @@ namespace CKK.Logic.Models
 
         public StoreItem FindStoreItemById(int id)
         {
-            var it = ;
+            
             //foreach(var item in Items)
             //{
             //    if(Items.Product._Id == id)

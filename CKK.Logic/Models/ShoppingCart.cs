@@ -132,9 +132,15 @@ namespace CKK.Logic.Models
 
         public decimal GetTotal() //Get total price
         {
-            return 0;
+            decimal t = 0;
+            // return 0;
             //return (_product1.GetTotal() + _product2.GetTotal() + _product3.GetTotal());
-
+            //return prod.GetTotal();
+            foreach (var e in Products)
+            {
+               t = e.GetProduct().GetPrice() + t;
+            }
+            return t;
         }
 
         public ShoppingCartItem GetProduct(int productNum) //get item id number
