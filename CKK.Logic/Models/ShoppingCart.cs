@@ -145,6 +145,12 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProduct(int productNum) //get item id number
         {
+
+            var gp =
+                from e in Products
+                where (e.GetProductById() == productNum)
+                select e;
+            return gp;
             //if(productNum == 1)
             //{
             //    return _product1;

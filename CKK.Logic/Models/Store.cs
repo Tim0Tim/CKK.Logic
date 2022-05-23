@@ -144,7 +144,7 @@ namespace CKK.Logic.Models
         public Product GetStoreItem(int productNum)
         {
 
-            var i1 = Get);
+            var i1 = ;
            //if( productNum == 1)//this area needs revising and changes to garentee it is functunal.
            // {
                 
@@ -179,7 +179,13 @@ namespace CKK.Logic.Models
 
         public StoreItem FindStoreItemById(int id)
         {
-            
+            var si =
+                from e in Items
+                where (e.GetProduct().GetId() == id)
+                select e;
+            return;
+
+
             //foreach(var item in Items)
             //{
             //    if(Items.Product._Id == id)
@@ -187,22 +193,22 @@ namespace CKK.Logic.Models
             //        return Items.Product;
             //    }
             //}
-           // if (_product1.GetId() == id)
-           // {
-           //     return _product1;
-           // }
-           //else if (_product2.GetId() == id)
-           // {
-           //     return _product2;
-           // }
-           //else if(_product3.GetId() == id)
-           // {
-           //     return _product3;
-           // }
-           // else
-           // {
-           //     return null;
-           // }
+            // if (_product1.GetId() == id)
+            // {
+            //     return _product1;
+            // }
+            //else if (_product2.GetId() == id)
+            // {
+            //     return _product2;
+            // }
+            //else if(_product3.GetId() == id)
+            // {
+            //     return _product3;
+            // }
+            // else
+            // {
+            //     return null;
+            // }
         }
     }
 }
