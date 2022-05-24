@@ -28,10 +28,14 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            if(prod.GetId() && quantity > 0 == Items.GetId() && Store.Items.GetQuantity() > 0)
+            if((prod.GetId() != 0 && quantity > 0) && (Products.g))
             {
-
+                ;
             }
+            //if(prod.GetId() && quantity > 0 == Products.GetId() && Products.GetQuantity() > 0)
+            //{
+
+            //}
             //if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId() && quantity > 0)
             //{
             //        _product1.SetQuantity(_product1.GetQuantity() + quantity);
@@ -112,6 +116,13 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
+            /*IEnumerable<StoreItem>*//*var*/
+            var si =
+            from e in Products
+            where (e.GetProduct().GetId() == id)
+            select e;
+
+            return si.FirstOrDefault();
             // if (_product1.GetProduct().GetId() == id)
             //{
             //    return _product1;

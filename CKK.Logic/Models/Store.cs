@@ -144,48 +144,53 @@ namespace CKK.Logic.Models
         public Product GetStoreItem(int productNum)
         {
 
-            var i1 = ;
-           //if( productNum == 1)//this area needs revising and changes to garentee it is functunal.
-           // {
-                
-           //     return _product1;
-           // }
-           //else
-           // {
-           //     if (productNum == 2)
-           //     {
-                    
-           //         return _product2;
-           //     }
-           //     else
-           //     {
-           //         if (productNum == 3)
-           //         {
-           //           //  _product3 = null;
-           //             return _product3;
-           //         }
-           //         else
-           //         {
-           //             return null;
-           //         }
-           //     }
+            var i1 = 1;
 
-                //}
-          
-          
             
+            //where (e.GetProduct().GetId() == id)
+            //select e;
+
+            //if( productNum == 1)//this area needs revising and changes to garentee it is functunal.
+            // {
+
+            //     return _product1;
+            // }
+            //else
+            // {
+            //     if (productNum == 2)
+            //     {
+
+            //         return _product2;
+            //     }
+            //     else
+            //     {
+            //         if (productNum == 3)
+            //         {
+            //           //  _product3 = null;
+            //             return _product3;
+            //         }
+            //         else
+            //         {
+            //             return null;
+            //         }
+            //     }
+
+            //}
+
+
+
             //return Product;
         }
 
         public StoreItem FindStoreItemById(int id)
         {
 
-            /*IEnumerable<StoreItem>*/var si =
+            /*IEnumerable<StoreItem>*//*var*/ var si =
                 from e in Items
                 where (e.GetProduct().GetId() == id)
                 select e;
-            
-            return si;
+
+            return si.FirstOrDefault();
 
 
             //foreach(var item in Items)
