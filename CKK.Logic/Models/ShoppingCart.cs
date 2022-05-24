@@ -31,11 +31,19 @@ namespace CKK.Logic.Models
             foreach (var element in Products)
             if(prod.GetId() != 0 && quantity > 0 && element.GetProduct().GetId()== prod.GetId())
             {
-                    //q = GetProduct(GetProductById(GetProduct(get))).SetQuantity(element.GetQuantity())
-                    int q = quantity + element.SetQuantity(GetProduct());
-                    element.SetQuantity(quantity + element.GetQuantity());
+                    var ai =
+                        from e in Products
+                        where (e != null && e.GetProduct().GetId() == prod.GetId())
+                        select e;
 
-            }
+                    if(quantity > 0)
+                    {
+                        element.SetQuantity(element.GetQuantity() + quantity);
+                        return element;
+                    }
+
+             }
+            return null;
             //if(prod.GetId() && quantity > 0 == Products.GetId() && Products.GetQuantity() > 0)
             //{
 

@@ -20,7 +20,7 @@ namespace CKK.Logic.Models
         public Store()
         {
             Items = new List<StoreItem>();
-            int _Id = _id;
+           // int _Id = _id;
         }
 
         public int GetId()
@@ -94,7 +94,12 @@ namespace CKK.Logic.Models
 
             if (r1.GetQuantity() <= 0)
             {
-                r1.SetQuantity(quantity = 0);
+                r1.SetQuantity(0);
+                return r1;
+            }
+            if (r1.GetQuantity() > 0)
+            {
+                r1.SetQuantity(r1.GetQuantity() - quantity);
                 return r1;
             }
             //if (r1 != null)
