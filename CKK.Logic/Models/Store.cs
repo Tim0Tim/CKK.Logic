@@ -144,9 +144,18 @@ namespace CKK.Logic.Models
         public Product GetStoreItem(int productNum)
         {
 
-            var i1 = 1;
+            for (int t = 0; t < productNum; t++)
+            {
 
-            
+                if (t == productNum)
+                {
+                    var m = Items[t].GetProduct();
+                    return m;
+                }
+            }
+            return null;
+
+
             //where (e.GetProduct().GetId() == id)
             //select e;
 

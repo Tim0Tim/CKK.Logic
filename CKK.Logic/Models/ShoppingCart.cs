@@ -28,9 +28,13 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            if((prod.GetId() != 0 && quantity > 0) && (Products.g))
+            foreach (var element in Products)
+            if(prod.GetId() != 0 && quantity > 0 && element.GetProduct().GetId()== prod.GetId())
             {
-                ;
+                    //q = GetProduct(GetProductById(GetProduct(get))).SetQuantity(element.GetQuantity())
+                    int q = quantity + element.SetQuantity(GetProduct());
+                    element.SetQuantity(quantity + element.GetQuantity());
+
             }
             //if(prod.GetId() && quantity > 0 == Products.GetId() && Products.GetQuantity() > 0)
             //{
@@ -77,6 +81,24 @@ namespace CKK.Logic.Models
 
         public  ShoppingCartItem RemoveProduct(Product prod, int quantity)
         {
+            var ri =
+                from e in Products
+                where (e != null && e.GetProduct().GetId() == prod.GetId())
+                select e;
+
+            foreach(var element in ri)
+            {
+                if(element.GetQuantity() <= 0)
+                {
+                    element.SetQuantity(0);
+                }
+                else
+                {
+                     element.SetQuantity(element.GetQuantity() - quantity);
+                }
+                return element;
+            }
+            return null;
 
             //if(_product1 != null && _product1.GetProduct().GetId() == prod.GetId())
             //{
@@ -156,12 +178,34 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProduct(int productNum) //get item id number
         {
+            //    from e in Products
+            //    where (e.GetProductById() == productNum)
+            //    select e;
+            //return gp;
 
-            var gp =
-                from e in Products
-                where (e.GetProductById() == productNum)
-                select e;
-            return gp;
+            for (int t = 0; t < productNum; t++)
+            {
+
+                if (t == productNum)
+                {
+                   var m = Products[t];
+                    return m;
+                }
+            }
+            return null;
+                
+                
+
+ 
+            //foreach(var element in Products)
+            //{
+            //    if(productNum == Products.FindIndex(element))
+            //    {
+            //        return element;
+            //    }
+            //}
+            //return null;
+
             //if(productNum == 1)
             //{
             //    return _product1;
