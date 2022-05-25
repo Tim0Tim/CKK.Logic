@@ -154,7 +154,7 @@ namespace CKK.Logic.Models
 
                 if (t == productNum)
                 {
-                    var m = Items[t].GetProduct();
+                    var m = Items[t].GetProducts();
                     return m;
                 }
             }
@@ -201,7 +201,7 @@ namespace CKK.Logic.Models
 
             /*IEnumerable<StoreItem>*//*var*/ var si =
                 from e in Items
-                where (e.GetProduct().GetId() == id)
+                where (e.GetProducts().GetId() == id)
                 select e;
 
             return si.FirstOrDefault();
