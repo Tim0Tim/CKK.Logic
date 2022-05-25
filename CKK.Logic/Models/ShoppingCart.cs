@@ -30,12 +30,12 @@ namespace CKK.Logic.Models
         {
             var ai =
             from e in Products
-            where (e != null && e.GetProducts().GetId() == prod.GetId())
+            where (e != null && e.GetProduct().GetId() == prod.GetId())
             select e;
 
             foreach (var element in ai)
             {
-                if (prod.GetId() != 0 && quantity > 0 && element.GetProducts().GetId() == prod.GetId())
+                if (prod.GetId() != 0 && quantity > 0 && element.GetProduct().GetId() == prod.GetId())
                 {
 
 
@@ -102,7 +102,7 @@ namespace CKK.Logic.Models
         {
             var ri =
                 from e in Products
-                where (e != null && e.GetProducts().GetId() == prod.GetId())
+                where (e != null && e.GetProduct().GetId() == prod.GetId())
                 select e;
 
             foreach(var element in ri)
@@ -160,7 +160,7 @@ namespace CKK.Logic.Models
             /*IEnumerable<StoreItem>*//*var*/
             var si =
             from e in Products
-            where (e.GetProducts().GetId() == id)
+            where (e.GetProduct().GetId() == id)
             select e;
 
             return si.FirstOrDefault();
@@ -195,28 +195,36 @@ namespace CKK.Logic.Models
             return t;
         }
 
-        public ShoppingCartItem GetProducts(int productNum) //get item id number
+        public ShoppingCartItem GetProduct(int productNum) //get item id number
         {
-            //    from e in Products
-            //    where (e.GetProductById() == productNum)
-            //    select e;
-            //return gp;
+            var gp =
+            from e in Products
+            where (e.GetProduct().GetId() == productNum)
+            select e;
+
 
             for (int t = 0; t <= productNum; t++)
             {
 
                 if (t == productNum)
                 {
-                    
-                   /*var m =*/ return Products[t-1];
+
+                    /*var m =*/
+                    return Products[t - 1];
                     //return m;
                 }
             }
             return null;
-                
-                
 
- 
+            //            foreach (var t in gp)
+            //            {
+            //                if (t.GetProducts().GetId() == productNum)
+            //                {
+            //;
+            //                }
+            //            }
+
+
             //foreach(var element in Products)
             //{
             //    if(productNum == Products.FindIndex(element))
