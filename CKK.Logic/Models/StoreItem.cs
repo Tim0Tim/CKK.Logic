@@ -17,7 +17,7 @@ namespace CKK.Logic.Models
             _quantity = quantity;
         }
 
-
+         
      
         public int GetQuantity()
         {
