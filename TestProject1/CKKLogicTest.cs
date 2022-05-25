@@ -36,7 +36,7 @@ namespace CKK.Logic.Tests
             sh.AddProduct(it2, 3);
             sh.AddProduct(it3, 1);
             var to = sh.GetTotal();
-            Assert.Equal(5.38m, to);
+            Assert.Equal(5.38m, to);//3.34
         }
 
         [Fact]

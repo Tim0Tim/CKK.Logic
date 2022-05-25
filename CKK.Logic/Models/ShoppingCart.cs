@@ -190,7 +190,7 @@ namespace CKK.Logic.Models
             //return prod.GetTotal();
             foreach (var e in Products)
             {
-               t = e.GetProduct().GetPrice() + t;
+               t = e.GetTotal() + t;
             }
             return t;
         }
@@ -202,13 +202,14 @@ namespace CKK.Logic.Models
             //    select e;
             //return gp;
 
-            for (int t = 0; t < productNum; t++)
+            for (int t = 0; t <= productNum; t++)
             {
 
                 if (t == productNum)
                 {
-                   var m = Products[t];
-                    return m;
+                    
+                   /*var m =*/ return Products[t-1];
+                    //return m;
                 }
             }
             return null;
