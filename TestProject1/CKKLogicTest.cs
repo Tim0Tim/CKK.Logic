@@ -104,8 +104,8 @@ namespace CKK.Logic.Tests
             sh.RemoveProduct(it2, 1);
             sh.RemoveProduct(it3, 1);
 
-            var ro1 = sh.GetProduct(1).GetQuantity();
-            var ro2 = sh.GetProduct(2).GetQuantity();
+            var ro1 = sh.GetProducts(1).GetQuantity();
+            var ro2 = sh.GetProducts(2).GetQuantity();
             //var ro3 = sh.GetProduct(3).GetQuantity();
 
             Assert.Equal(1, ro1);
@@ -148,8 +148,8 @@ namespace CKK.Logic.Tests
             sh.RemoveProduct(it2, 1);
             sh.RemoveProduct(it3, 1);
 
-            var ro1 = sh.GetProduct(1).GetQuantity();
-            var ro2 = sh.GetProduct(2).GetQuantity();
+            var ro1 = sh.GetProducts(1).GetQuantity();
+            var ro2 = sh.GetProducts(2).GetQuantity();
             //var ro3 = sh.GetProduct(3).GetQuantity();
 
             Assert.NotEqual(2, ro1);
@@ -174,7 +174,7 @@ namespace CKK.Logic.Tests
 
             sh.AddProduct(it1, 1);
 
-            var ro1 = sh.GetProduct(1).GetQuantity();
+            var ro1 = sh.GetProducts(1).GetQuantity();
 
             Assert.Equal(1, ro1);
 
@@ -197,7 +197,7 @@ namespace CKK.Logic.Tests
 
             sh.AddProduct(it1, 1);
 
-            var ro1 = sh.GetProduct(1).GetQuantity();
+            var ro1 = sh.GetProducts(1).GetQuantity();
 
             Assert.NotEqual(2, ro1);
         }
