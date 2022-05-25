@@ -28,21 +28,32 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            foreach (var element in Products)
-            if(prod.GetId() != 0 && quantity > 0 && element.GetProduct().GetId()== prod.GetId())
-            {
-                    var ai =
-                        from e in Products
-                        where (e != null && e.GetProduct().GetId() == prod.GetId())
-                        select e;
+            var ai =
+            from e in Products
+            where (e != null && e.GetProduct().GetId() == prod.GetId())
+            select e;
 
-                    if(quantity > 0)
+            foreach (var element in ai)
+            {
+                if (prod.GetId() != 0 && quantity > 0 && element.GetProduct().GetId() == prod.GetId())
+                {
+
+
+                    if (quantity > 0)
                     {
                         element.SetQuantity(element.GetQuantity() + quantity);
                         return element;
                     }
 
-             }
+                }
+               
+            }
+            if (prod.GetId() != 0 && quantity > 0)
+            {
+                var tt = new ShoppingCartItem(prod, quantity);
+                Products.Add(tt);
+                return tt;
+            }
             return null;
             //if(prod.GetId() && quantity > 0 == Products.GetId() && Products.GetQuantity() > 0)
             //{
