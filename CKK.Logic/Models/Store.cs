@@ -146,7 +146,7 @@ namespace CKK.Logic.Models
             //}
         }
 
-        public Product GetStoreItem(int productNum)
+        public Product GetStoreItems(int productNum)
         {
 
             for (int t = 0; t < productNum; t++)

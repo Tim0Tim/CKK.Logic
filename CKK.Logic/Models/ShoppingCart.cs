@@ -30,12 +30,12 @@ namespace CKK.Logic.Models
         {
             var ai =
             from e in Products
-            where (e != null && e.GetProduct().GetId() == prod.GetId())
+            where (e != null && e.GetProducts().GetId() == prod.GetId())
             select e;
 
             foreach (var element in ai)
             {
-                if (prod.GetId() != 0 && quantity > 0 && element.GetProduct().GetId() == prod.GetId())
+                if (prod.GetId() != 0 && quantity > 0 && element.GetProducts().GetId() == prod.GetId())
                 {
 
 
@@ -102,7 +102,7 @@ namespace CKK.Logic.Models
         {
             var ri =
                 from e in Products
-                where (e != null && e.GetProduct().GetId() == prod.GetId())
+                where (e != null && e.GetProducts().GetId() == prod.GetId())
                 select e;
 
             foreach(var element in ri)
@@ -160,7 +160,7 @@ namespace CKK.Logic.Models
             /*IEnumerable<StoreItem>*//*var*/
             var si =
             from e in Products
-            where (e.GetProduct().GetId() == id)
+            where (e.GetProducts().GetId() == id)
             select e;
 
             return si.FirstOrDefault();
