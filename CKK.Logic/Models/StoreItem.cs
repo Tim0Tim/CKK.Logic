@@ -29,7 +29,7 @@ namespace CKK.Logic.Models
             _quantity = quantity;
         }
 
-        public Product GetProducts()
+        public Product GetProduct()
         {
             return _product;
         }

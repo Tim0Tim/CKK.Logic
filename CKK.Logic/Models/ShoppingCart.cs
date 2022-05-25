@@ -195,7 +195,7 @@ namespace CKK.Logic.Models
             return t;
         }
 
-        public ShoppingCartItem GetProduct(int productNum) //get item id number
+        public ShoppingCartItem GetProducts(int productNum) //get item id number
         {
             var gp =
             from e in Products
