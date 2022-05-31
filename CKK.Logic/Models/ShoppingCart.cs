@@ -106,27 +106,9 @@ namespace CKK.Logic.Models
             return t;
         }
 
-        public ShoppingCartItem GetProducts(int productNum) //get item id number
+        public List<ShoppingCartItem> GetProducts() //get item id number
         {
-            var gp =
-            from e in Products
-            where (e.GetProduct().GetId() == productNum)
-            select e;
-
-
-            for (int t = 0; t <= productNum; t++)
-            {
-
-                if (t == productNum)
-                {
-
-
-                    return Products[t - 1];
-
-                }
-            }
-            return null;
-
+            return Products;
         }     
     }
 }
