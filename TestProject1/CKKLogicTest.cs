@@ -183,9 +183,11 @@ namespace CKK.Logic.Tests
         [Fact]
         public void AddProductWrong()
         {
+            
             var Cu = new Customer();
             var sh = new ShoppingCart(Cu);
             var it1 = new Product();
+            var sti = new StoreItem(it1, 50);
 
             it1.SetId(1);
             it1.SetName("Tomato");
@@ -197,7 +199,7 @@ namespace CKK.Logic.Tests
 
             sh.AddProduct(it1, 1);
 
-            var ro1 = sh.GetProducts(1).GetQuantity();
+            var ro1 = sh.GetProducts().
 
             Assert.NotEqual(2, ro1);
         }
