@@ -78,21 +78,25 @@ namespace CKK.Logic.Models
 
         }
 
-        public Product GetStoreItems(int productNum) //check if need change;
+        public List<StoreItem> GetStoreItems()
         {
-
-            for (int t = 0; t < productNum; t++)
-            {
-
-                if (t == productNum)
-                {
-                    var m = Items[t].GetProduct();
-                    return m;
-                }
-            }
-            return null;
-
+            return Items;
         }
+        //public Product GetStoreItems(int productNum) //check if need change;
+        //{
+
+        //    for (int t = 0; t < productNum; t++)
+        //    {
+
+        //        if (t == productNum)
+        //        {
+        //            var m = Items[t].GetProduct();
+        //            return m;
+        //        }
+        //    }
+        //    return null;
+
+        //}
 
         public StoreItem FindStoreItemById(int id)
         {
