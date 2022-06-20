@@ -87,16 +87,17 @@ namespace CKK.Logic.Models
 
             foreach (var element in Products)
             {
+                
+                if( element.GetProduct().GetId() == id)
+                {
+                    element.SetQuantity(element.GetQuantity() - quantity);
+                    return element;
+                }
                 if (element.GetQuantity() <= 0 && element.GetProduct().GetId() == id)
                 {
                     Products.Remove(element);
                     //element.SetQuantity(0);
                     //return element;
-                }
-                else if( element.GetProduct().GetId() == id)
-                {
-                    element.SetQuantity(element.GetQuantity() - quantity);
-                    return element;
                 }
             }
 
