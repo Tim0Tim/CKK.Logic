@@ -100,17 +100,17 @@ namespace CKK.Logic.Tests
             sh.AddProduct(it2, 1);
             sh.AddProduct(it3, 4);
 
-            sh.RemoveProduct(it1, 1);
-            sh.RemoveProduct(it2, 1);
-            sh.RemoveProduct(it3, 1);
+            sh.RemoveProduct(1, 1);
+            sh.RemoveProduct(2, 1);
+            sh.RemoveProduct(3, 1);
 
-            var ro1 = sh.GetProducts(1).GetQuantity();
-            var ro2 = sh.GetProducts(2).GetQuantity();
-            //var ro3 = sh.GetProduct(3).GetQuantity();
+            var ro1 = sh.GetProductById(1).GetQuantity();
+            var ro2 = sh.GetProductById(2).GetQuantity();
+            var ro3 = sh.GetProductById(3).GetQuantity();
 
             Assert.Equal(1, ro1);
             Assert.Equal(0, ro2);
-            //Assert.Equal(3, ro3);
+            Assert.Equal(3, ro3);
 
         }
 
@@ -144,17 +144,17 @@ namespace CKK.Logic.Tests
             sh.AddProduct(it2, 1);
             sh.AddProduct(it3, 4);
 
-            sh.RemoveProduct(it1, 1);
-            sh.RemoveProduct(it2, 1);
-            sh.RemoveProduct(it3, 1);
+            sh.RemoveProduct(1, 1);
+            sh.RemoveProduct(2, 1);
+            sh.RemoveProduct(3, 1);
 
-            var ro1 = sh.GetProducts(1).GetQuantity();
-            var ro2 = sh.GetProducts(2).GetQuantity();
-            //var ro3 = sh.GetProduct(3).GetQuantity();
+            var ro1 = sh.GetProductById(1).GetQuantity();
+            var ro2 = sh.GetProductById(2).GetQuantity();
+            var ro3 = sh.GetProductById(3).GetQuantity();
 
             Assert.NotEqual(2, ro1);
-            Assert.Equal(0, ro2);
-            //Assert.Equal(3, ro3);
+            Assert.NotEqual(1, ro2);
+            Assert.NotEqual(4, ro3);
         }
 
         [Fact]
@@ -174,7 +174,7 @@ namespace CKK.Logic.Tests
 
             sh.AddProduct(it1, 1);
 
-            var ro1 = sh.GetProducts(1).GetQuantity();
+            var ro1 = sh.GetProductById(1).GetQuantity();
 
             Assert.Equal(1, ro1);
 
@@ -183,7 +183,7 @@ namespace CKK.Logic.Tests
         [Fact]
         public void AddProductWrong()
         {
-            
+
             var Cu = new Customer();
             var sh = new ShoppingCart(Cu);
             var it1 = new Product();
@@ -199,13 +199,13 @@ namespace CKK.Logic.Tests
 
             sh.AddProduct(it1, 1);
 
-            var ro1 = sh.GetProducts().
+            var ro1 = sh.GetProductById(1).GetQuantity();
 
             Assert.NotEqual(2, ro1);
         }
     }
 }
-// var ct = new Customer();
-// var est = new ShoppingCart(ct);
-//notes
-//more junk
+//// var ct = new Customer();
+//// var est = new ShoppingCart(ct);
+////notes
+////more junk
