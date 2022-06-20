@@ -65,9 +65,14 @@ namespace CKK.Logic.Models
                 r1.SetQuantity(0);
                 return r1;
             }
-            else if (r1.GetQuantity() > 0)
+            else if (r1.GetQuantity() > 0 && r1.GetQuantity() >= quantity)
             {
                 r1.SetQuantity(r1.GetQuantity() - quantity);
+                return r1;
+            }
+            else if (r1.GetQuantity() > 0 && r1.GetQuantity() <= quantity)
+            {
+                r1.SetQuantity(0);
                 return r1;
             }
 
