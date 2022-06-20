@@ -89,8 +89,9 @@ namespace CKK.Logic.Models
             {
                 if (element.GetQuantity() <= 0 && element.GetProduct().GetId() == id)
                 {
-                    element.SetQuantity(0);
-                    return element;
+                    Products.Remove(element);
+                    //element.SetQuantity(0);
+                    //return element;
                 }
                 else if( element.GetProduct().GetId() == id)
                 {
