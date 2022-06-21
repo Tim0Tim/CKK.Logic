@@ -84,10 +84,9 @@ namespace CKK.Logic.Models
         //}
         public ShoppingCartItem RemoveProduct(int id, int quantity) // test rewrite
         {
+            var element = GetProductById(id);
 
-            foreach (var element in Products)
-            {
-                if (element.GetQuantity() <= 0 && element.GetProduct().GetId() == id)
+                if (element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id)
                 {
                     Products.Remove(element);
                    
@@ -100,7 +99,7 @@ namespace CKK.Logic.Models
                     return element;
                 }
                 
-            }
+           
 
             //var ri =
             //    from e in Products
