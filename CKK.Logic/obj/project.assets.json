@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj",
+      "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
       "projectName": "CKK.Logic",
-      "projectPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj",
+      "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
       "packagesPath": "C:\\Users\\4400112995\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\4400112995\\source\\repos\\CKK.Logic\\ckk.logic\\CKK.Logic\\obj\\",
+      "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
