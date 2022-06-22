@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj": {}
+    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj": {}
   },
   "projects": {
-    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj": {
+    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
+        "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj",
         "projectName": "CKK.Logic",
-        "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
+        "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj",
         "packagesPath": "C:\\Users\\4400112995\\.nuget\\packages\\",
-        "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\obj\\",
+        "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

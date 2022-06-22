@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\TestProject1\\TestProject1.csproj": {}
+    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj": {
+    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
+        "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj",
         "projectName": "CKK.Logic",
-        "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj",
+        "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj",
         "packagesPath": "C:\\Users\\4400112995\\.nuget\\packages\\",
-        "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\obj\\",
+        "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\TestProject1\\TestProject1.csproj": {
+    "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\TestProject1\\TestProject1.csproj",
+        "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\TestProject1\\TestProject1.csproj",
         "packagesPath": "C:\\Users\\4400112995\\.nuget\\packages\\",
-        "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\TestProject1\\obj\\",
+        "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -92,8 +92,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj": {
-                "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\CKK.Logic\\CKK.Logic.csproj"
+              "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj": {
+                "projectPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\CKK.Logic.csproj"
               }
             }
           }

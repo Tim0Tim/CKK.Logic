@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UnLsByolnDNoQhHwUuBxn9HWAAiEA/Fh7CJXEPU37CvW+Yt9qU05puqK29GpEUE2QEeirbemoX32eLbElxZFIQ==",
+  "dgSpecHash": "brSUxWvjasIwJxcBXb1xwZK7suLQKLeV2HWvb0yBN5VIOdSV0e3LMhC8OWy9V4ipzOPmPcAZ+xz2yGbXHjnvMw==",
   "success": true,
-  "projectFilePath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\CKK.Logic\\TestProject1\\TestProject1.csproj",
+  "projectFilePath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\TestProject1\\TestProject1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\4400112995\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\4400112995\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
