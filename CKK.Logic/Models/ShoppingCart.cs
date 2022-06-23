@@ -90,14 +90,14 @@ namespace CKK.Logic.Models
                 {
                     Products.Remove(element);
                 }
-                if (element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id)
+                else if (element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id)
                 {
                     Products.Remove(element);
                    
                    //element.SetQuantity(0);
                     //return element;
                 }
-                if( element.GetProduct().GetId() == id)
+                else if( element.GetProduct().GetId() == id)
                 {
                     element.SetQuantity(element.GetQuantity() - quantity);
                     //return element;
