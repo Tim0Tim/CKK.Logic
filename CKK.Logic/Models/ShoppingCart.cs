@@ -92,12 +92,12 @@ namespace CKK.Logic.Models
                     Products.Remove(element);
                    
                    //element.SetQuantity(0);
-                   return element;
+                   //return element;
                 }
                 else if( element.GetProduct().GetId() == id)
                 {
                     element.SetQuantity(element.GetQuantity() - quantity);
-                    //return element;
+                    return element;
                 }
                 
            
