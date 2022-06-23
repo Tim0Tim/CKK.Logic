@@ -14,8 +14,7 @@
         "outputPath": "D:\\GB_Programing_Class_college\\Programs\\CKK.Logic\\ckk.logic\\CKK.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\4400112995\\AppData\\Roaming\\NuGet\\NuGet.Config",
