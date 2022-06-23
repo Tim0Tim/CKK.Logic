@@ -99,10 +99,10 @@ namespace CKK.Logic.Models
                     element.SetQuantity(element.GetQuantity() - quantity);
                     //return element;
                 }
-                if (element.GetQuantity() < 0)
-                {
-                    Products.Remove(element);
-                }
+                //if (element.GetQuantity() < 0)
+                //{
+                //    Products.Remove(element);
+                //}
                 
            
 
