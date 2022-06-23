@@ -94,10 +94,10 @@ namespace CKK.Logic.Models
                    //element.SetQuantity(0);
                    // return element;
                 }
-                else if( element.GetProduct().GetId() == id && element.GetQuantity() - quantity > 0)
+                else if( element.GetProduct().GetId() == id)
                 {
                     element.SetQuantity(element.GetQuantity() - quantity);
-                    return element;
+                    //return element;
                 }
                 
            
