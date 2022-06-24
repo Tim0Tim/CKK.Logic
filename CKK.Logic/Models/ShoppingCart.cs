@@ -60,77 +60,30 @@ namespace CKK.Logic.Models
                 return AddProduct(prod,1);
         }
 
-        //public ShoppingCartItem RemoveProduct(Product prod, int quantity) //argument apears to be the problem
-        //{
-        //    var ri =
-        //        from e in Products
-        //        where (e != null && e.GetProduct().GetId() == prod.GetId())
-        //        select e;
 
-        //    foreach (var element in ri)
-        //    {
-        //        if (element.GetQuantity() <= 0)
-        //        {
-        //            element.SetQuantity(0);
-        //        }
-        //        else
-        //        {
-        //            element.SetQuantity(element.GetQuantity() - quantity);
-        //        }
-        //        return element;
-        //    }
-        //    return null;
-
-        //}
-        public ShoppingCartItem RemoveProduct(int id, int quantity) // test rewrite
+        public ShoppingCartItem RemoveProduct(int id, int quantity)
         {
             var element = GetProductById(id);
 
 
-                if (element != null)//(element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id || element.GetQuantity() < 0)
+            if (element != null)
+            {
+                if(element.GetQuantity() - quantity > 0)
                 {
-                    if(element.GetQuantity() - quantity > 0/*element.GetProduct().GetId() == id*/)
-                    {
-                         element.SetQuantity(element.GetQuantity() - quantity);
-                    }
-                    else
-                    {
-                         element.SetQuantity(0);
-                         Products.Remove(element);
-                    }
-
-                    return element;
+                    element.SetQuantity(element.GetQuantity() - quantity);
                 }
                 else
                 {
-                    return null;
+                    element.SetQuantity(0);
+                    Products.Remove(element);
                 }
-                
-                //if (element.GetQuantity() < 0)
-                //{
-                //    Products.Remove(element);
-                //}
-                
-           
 
-            //var ri =
-            //    from e in Products
-            //    where (e != null && e.GetProduct().GetId() == id)
-            //    select e;
-
-            //foreach (var element in ri)
-            //{
-            //    if (element.GetQuantity() <= 0)
-            //    {
-            //        element.SetQuantity(0);
-            //    }
-            //    else
-            //    {
-            //        element.SetQuantity(element.GetQuantity() - quantity);
-            //    }
-            //    return element;
-            //}
-
+                    return element;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public ShoppingCartItem GetProductById(int id)
