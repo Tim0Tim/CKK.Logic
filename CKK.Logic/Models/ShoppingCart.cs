@@ -89,7 +89,7 @@ namespace CKK.Logic.Models
 
                 if (element != null)//(element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id || element.GetQuantity() < 0)
                 {
-                    if(element.GetProduct().GetId() == id)
+                    if(element.GetQuantity() - quantity <= 0/*element.GetProduct().GetId() == id*/)
                     {
                          element.SetQuantity(element.GetQuantity() - quantity);
                     }
