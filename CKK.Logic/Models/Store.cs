@@ -43,7 +43,7 @@ namespace CKK.Logic.Models
         {
             var a2 = new StoreItem(prod, quantity);
             var a1 = FindStoreItemById(prod.GetId());
-            if (a1 == null && a2.GetQuantity() > 0)
+            if (a1 == null && quantity > 0 && prod != null)
             {   
                 
                 Items.Add(a2);
