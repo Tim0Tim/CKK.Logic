@@ -53,7 +53,7 @@ namespace CKK.Logic.Models
                     Items.Add(a2);
                     return a2;
                 }
-                else if (prod != null && quantity != 0)
+                else if (a1 != null && quantity != 0)
                 {
                     a1.SetQuantity(a1.GetQuantity() + quantity);
                     return a1;
