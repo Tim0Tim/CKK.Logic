@@ -91,7 +91,7 @@ namespace CKK.Logic.Models
                 {
                 element.SetQuantity(0);
                 
-               // Products.Remove(element);
+                Products.Remove(element);
 
                 return element;
                 }
