@@ -43,8 +43,8 @@ namespace CKK.Logic.Models
         {
             var a2 = new StoreItem(prod, quantity);
             var a1 = FindStoreItemById(prod.GetId());
-            if (prod.GetId() !<= 0 && prod.GetName() != null && prod.GetPrice() > 0)
-            {
+            //if (a2.GetQuantity() > 0 && a2.GetProduct().GetName() != null && prod.GetPrice() > 0)
+            //{
 
 
                 if (a1 == null && quantity > 0)
@@ -62,11 +62,11 @@ namespace CKK.Logic.Models
                 {
                     return null;
                 }
-            }
-            else
-            {
-                return null;
-            }
+            //}
+            //else
+            //{
+            //    return null;
+            //}
         }
 
         public StoreItem RemoveStoreItem(int id, int quantity)
