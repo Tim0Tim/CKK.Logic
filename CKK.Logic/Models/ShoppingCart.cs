@@ -85,21 +85,27 @@ namespace CKK.Logic.Models
         public ShoppingCartItem RemoveProduct(int id, int quantity) // test rewrite
         {
             var element = GetProductById(id);
-                
-             
-                if (element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id || element.GetQuantity() < 0)
-                {
-                element.SetQuantity(0);
-                
-                Products.Remove(element);
 
-                return element;
-                }
-                if( element.GetProduct().GetId() == id)
+
+                if (element != null)//(element.GetQuantity() - quantity <= 0 && element.GetProduct().GetId() == id || element.GetQuantity() < 0)
                 {
-                    element.SetQuantity(element.GetQuantity() - quantity);
-                    //return element;
+                    if(element.GetProduct().GetId() == id)
+                    {
+                         element.SetQuantity(element.GetQuantity() - quantity);
+                    }
+                    else
+                    {
+                         element.SetQuantity(0);
+                         Products.Remove(element);
+                    }
+
+                    return element;
                 }
+                else
+                {
+                    return null;
+                }
+                
                 //if (element.GetQuantity() < 0)
                 //{
                 //    Products.Remove(element);
@@ -124,7 +130,6 @@ namespace CKK.Logic.Models
             //    }
             //    return element;
             //}
-            return null;
 
         }
 
