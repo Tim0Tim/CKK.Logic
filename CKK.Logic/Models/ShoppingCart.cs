@@ -94,7 +94,7 @@ namespace CKK.Logic.Models
                     Products.Remove(element);
                    
                    
-                   return GetProductById(id);
+                   return element;
                 }
                 if( element.GetProduct().GetId() == id)
                 {
